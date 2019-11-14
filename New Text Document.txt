@@ -1,0 +1,11 @@
+the loai: hoat hinh, vien tuong, hanh dong, kinh di, hài
+ten
+nam sx
+thoi luong
+nha san xuat
+noi dung
+anh
+id
+
+
+quan ly: them, sua, xoa, => tao bieu bang co san thong tin cu~ 
