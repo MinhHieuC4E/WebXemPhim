@@ -18,7 +18,83 @@
         <div class="container mt-3">
             <h2>Danh sách phim</h2>
             <p>Tìm kiếm phim muốn sửa đổi bằng tên phim hoặc thể loại phim</p>
-            <input class="form-control" id="myInput" type="text" placeholder="Tìm kiếm...">
+            <div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Thêm mới
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Điền thông tin phim</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">id</span>
+                                    </div>
+                                    <input id="id" class="form-control" placeholder="Nhập id...">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Tên phim</span>
+                                        </div>
+                                        <input id="ten" class="form-control" placeholder="Nhập tên...">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Thể loại</span>
+                                        </div>
+                                        <input id="theLoai" class="form-control" placeholder="Nhập thể loại...">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Nhà sản xuất</span>
+                                        </div>
+                                        <input id="nhaSanXuat" class="form-control" placeholder="Nhập nhà sản xuất...">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Thời lượng</span>
+                                        </div>
+                                        <input id="thoiLuong" class="form-control" placeholder="Nhập thời lượng...">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Năm sản xuất</span>
+                                        </div>
+                                        <input id="namSanXuat" class="form-control" placeholder="Nhập năm sản xuất...">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Nội dung phim</span>
+                                        </div>
+                                        <input id="noiDung" class="form-control" placeholder="Nhập mô tả về phim...">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-primary" onclick=add()>Lưu lại</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="form-control" id="myInput" type="text" placeholder="Tìm kiếm...">
+            </div>
+
             <br>
             <table class="table table-bordered">
                 <thead>
@@ -30,7 +106,7 @@
                     </tr>
                 </thead>
                 <tbody id="myTable">
-                    
+
                 </tbody>
             </table>
 
@@ -48,8 +124,8 @@
             });
         });
     </script>
-    
-    <script src="..\js\data.js"></script>
+
+    <script src="..\js\user.js"></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@ let danhSachPhim = [
     },
     {
         "id": "phim4",
-        "ten": "Quá nhanh quá nguy hiểm: HOBBS và SHAW",
+        "ten": "Fast and Furious: HOBBS và SHAW",
         "theLoai": "phim hành động",
         "nhaSanXuat": "Chris Morgan Productions, Seven Bucks Productions, Universal Pictures",
         "noiDung": "Sau 8 phim với phần doanh thu chạm mức 5 tỉ đô la Mỹ toàn cầu, giờ đây thương hiệu Fast & Furious sẽ trở lại với một phần ngoại truyện hoàn toàn độc lập với sự tham gia của Dwayne Johnson trong vai Luke Hobbs và Jason Statham trong vai Deckard Shaw trong Hobbs & Shaw.<br> Câu chuyện giữa hai người tưởng như không đội trời chung là Đặc vụ An ninh Ngoại giao Mỹ Luke Hobbs và tên tội phạm đánh thuê khét tiếng Deckard Shaw khi họ bất đắc dĩ phải bắt tay hợp tác nhằm ngăn chặn âm mưu của trùm phản diện cực nguy hiểm trong diện bí ẩn Brixton.",
@@ -221,27 +221,4 @@ let danhSachPhim = [
     },
 
 ]
-function displayDanhSach() {
-    let a = "";
-    for (let i = 0; i < danhSachPhim.length; i++) {
-        const ds = danhSachPhim[i];
-        a += `<tr>
-                <td>${i+1}</td>
-                <td> <button onclick = detail('${ds.id}') type="button" class="btn btn-link">${ds.ten}</button></td>
-                <td>${ds.theLoai}</td>
-                <td>
-                    <button type="button" class="btn btn-primary">Thay đổi</button>
-                    <button type="button" class="btn btn-danger">Gỡ bỏ</button>
-                </td>
-            </tr>`
-    }
-    document.getElementById("myTable").innerHTML += a;
-}
-displayDanhSach();
-
-function detail(id) {
-    localStorage.setItem("selected",id);
-    window.location.href = "../html/detail.html";
-}
-
 localStorage.setItem("DSPhim",JSON.stringify(danhSachPhim));
