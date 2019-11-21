@@ -18,15 +18,16 @@
         <div class="container mt-3">
             <h2>Danh sách phim</h2>
             <p>Tìm kiếm phim muốn sửa đổi bằng tên phim hoặc thể loại phim</p>
+
             <div>
                 <div>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Thêm mới
+                        Thêm mới
                     </button>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Điền thông tin phim</h5>
@@ -35,60 +36,133 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">id</span>
+                                                </div>
+                                                <input id="id" class="form-control" placeholder="...">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Tên phim</span>
+                                                    </div>
+                                                    <input id="ten" class="form-control" placeholder="...">
+                                            </div>
+    
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">điểm IMDb</span>
+                                                </div>
+                                                <input id="IMDb" class="form-control" placeholder="...">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Quốc gia</span>
+                                                </div>
+                                                <input id="quocGia" class="form-control" placeholder="...">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Ngôn ngữ</span>
+                                                </div>
+                                                <input id="ngonNgu" class="form-control" placeholder="...">
+                                            </div>
+
+                                            
+                                        </div>
+                                        <div class="col-6">
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Thể loại</span>
+                                                </div>
+                                                <select id="theLoai" class="form-control">
+                                                    <option selected>Phim hành động</option>
+                                                    <option>Phim kinh dị</option>
+                                                    <option>Phim hoạt hình</option>
+                                                    <option>Phim viễn tưởng</option>
+                                                    <option>Phim hài</option>
+                                                </select>
+                                            </div>
+
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Nhà sản xuất</span>
+                                                </div>
+                                                <input id="nhaSanXuat" class="form-control" placeholder="...">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Thời lượng</span>
+                                                </div>
+                                                <input id="thoiLuong" class="form-control" placeholder="...">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Năm sản xuất</span>
+                                                </div>
+                                                <input id="namSanXuat" class="form-control" placeholder="...">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">tên đạo diễn</span>
+                                                </div>
+                                                <input id="daoDien" class="form-control" placeholder="...">
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text">id</span>
+                                            <span class="input-group-text">Tên các diễn viên</span>
                                         </div>
-                                        <input id="id" class="form-control" placeholder="Nhập id...">
+                                        <input id="dienVien" class="form-control" placeholder="...">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="noiDung">Nội dung phim:</label>
+                                        <textarea class="form-control" placeholder="nhập nội dung..." rows="5"
+                                            id="noiDung"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="review">Review:</label>
+                                        <textarea class="form-control" placeholder="nhập review..." rows="5"
+                                            id="review"></textarea>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Tên phim</span>
-                                            </div>
-                                            <input id="ten" class="form-control" placeholder="Nhập tên...">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">link trailer youtube</span>
+                                        </div>
+                                        <input id="trailer" class="form-control" placeholder="...">
+                                        <p class="text-primary">Chỉ nhập phần mã (VD:
+                                            https://www.youtube.com/watch?v=3KAHpaxdWHY => nhập: 3KAHpaxdWHY)</p>
                                     </div>
 
                                     <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Thể loại</span>
-                                            </div>
-                                            <input id="theLoai" class="form-control" placeholder="Nhập thể loại...">
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Nhà sản xuất</span>
-                                            </div>
-                                            <input id="nhaSanXuat" class="form-control" placeholder="Nhập nhà sản xuất...">
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Thời lượng</span>
-                                            </div>
-                                            <input id="thoiLuong" class="form-control" placeholder="Nhập thời lượng...">
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Năm sản xuất</span>
-                                            </div>
-                                            <input id="namSanXuat" class="form-control" placeholder="Nhập năm sản xuất...">
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">Nội dung phim</span>
-                                            </div>
-                                            <input id="noiDung" class="form-control" placeholder="Nhập mô tả về phim...">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Ảnh phim</span>
+                                        </div>
+                                        <input id="anh" class="form-control"
+                                            placeholder="nhập tên ảnh (vd: anh.jpg)...">
+                                        <p class="text-primary">Lưu ảnh vào thư mục theo đường dẫn: WebXemPhim/img</p>
                                     </div>
 
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                                    <button type="button" class="btn btn-primary" onclick=add()>Lưu lại</button>
+                                    <button type="button" class="btn btn-primary" onclick=checkadd()>Lưu lại</button>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +171,7 @@
                 <div>
                     <input class="form-control" id="myInput" type="text" placeholder="Tìm kiếm...">
                 </div>
-                
+
             </div>
 
             <br>

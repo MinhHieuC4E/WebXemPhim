@@ -4,6 +4,7 @@ let dsPhim = JSON.parse(localStorage.getItem("DSPhim"));
 let Selected_id = localStorage.getItem("selected"); 
 // tim va chi ra phim ng dung da chon
 
+
 function disPlay() {
     
     let PhimSelected;
