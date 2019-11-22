@@ -12,10 +12,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+    <style>
+        body {
+            background-color: #22202c;
+            background-size: cover; 
+
+        }
+        .car {
+            box-shadow: 0 0 20px 10px rgb(116, 114, 114);
+        }
+
+    </style>
 
 <body>
     <div class="container">
-        <div class="container mt-3">
+        <div class="container mt-3 border-0 text-white rounded car" style="background-color: rgb(196, 130, 31); padding:10px;">
             <h2>Danh sách phim</h2>
             <p>Tìm kiếm phim muốn sửa đổi bằng tên phim hoặc thể loại phim</p>
 
@@ -43,21 +54,21 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">id</span>
                                                 </div>
-                                                <input id="id" class="form-control" placeholder="...">
+                                                <input id="id" class="form-control" placeholder="vd: phim22...">
                                             </div>
 
                                             <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">Tên phim</span>
-                                                    </div>
-                                                    <input id="ten" class="form-control" placeholder="...">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Tên phim</span>
+                                                </div>
+                                                <input id="ten" class="form-control" placeholder="...">
                                             </div>
-    
+
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">điểm IMDb</span>
                                                 </div>
-                                                <input id="IMDb" class="form-control" placeholder="...">
+                                                <input id="IMDb" class="form-control" placeholder="vd:8.5 ...">
                                             </div>
 
                                             <div class="input-group mb-3">
@@ -74,7 +85,7 @@
                                                 <input id="ngonNgu" class="form-control" placeholder="...">
                                             </div>
 
-                                            
+
                                         </div>
                                         <div class="col-6">
 
@@ -103,14 +114,15 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">Thời lượng</span>
                                                 </div>
-                                                <input id="thoiLuong" class="form-control" placeholder="...">
+                                                <input id="thoiLuong" class="form-control"
+                                                    placeholder="vd: 90 phút ...">
                                             </div>
 
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">Năm sản xuất</span>
                                                 </div>
-                                                <input id="namSanXuat" class="form-control" placeholder="...">
+                                                <input id="namSanXuat" class="form-control" placeholder="vd: 2019...">
                                             </div>
 
                                             <div class="input-group mb-3">
@@ -196,9 +208,38 @@
     <script>
         $(document).ready(function () {
             $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
+                let str = $(this).val().toLowerCase();
+                    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+                    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+                    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+                    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+                    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+                    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+                    str = str.replace(/đ/g, "d");
+                    str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+                    str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+                    str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+                    str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+                    str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+                    str = str.replace(/Đ/g, "D");
+                    
                 $("#myTable tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    let str1 = $(this).text()
+                    str1 = str1.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+                    str1 = str1.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+                    str1 = str1.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+                    str1 = str1.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+                    str1 = str1.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+                    str1 = str1.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+                    str1 = str1.replace(/đ/g, "d");
+                    str1 = str1.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+                    str1 = str1.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+                    str1 = str1.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+                    str1 = str1.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+                    str1 = str1.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+                    str1 = str1.replace(/Đ/g, "D");
+
+                    $(this).toggle(str1.toLowerCase().indexOf(str) > -1)
                 });
             });
         });

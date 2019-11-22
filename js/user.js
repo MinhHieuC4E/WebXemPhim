@@ -8,7 +8,7 @@ function displayDanhSach() {
         const ds = danhsach[i];
         a += `<tr>
                 <td>${i + 1}</td>
-                <td> <button onclick = detail('${ds.id}') type="button" class="btn btn-link">${ds.ten}</button></td>
+                <td> <button onclick = detail('${ds.id}') type="button" class="btn btn-link text-dark"><b>${ds.ten}</b></button></td>
                 <td>${ds.theLoai}</td>
                 <td>
                 
@@ -37,14 +37,14 @@ function displayDanhSach() {
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text">Tên phim</span>
                                                     </div>
-                                                    <input id="ten1" class="form-control" placeholder="...">
+                                                    <input id="ten1" class="form-control" placeholder="vd:pim22...">
                                             </div>
     
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">điểm IMDb</span>
                                                 </div>
-                                                <input id="IMDb1" class="form-control" placeholder="...">
+                                                <input id="IMDb1" class="form-control" placeholder="vd:8.5 ...">
                                             </div>
 
                                             <div class="input-group mb-3">
@@ -90,14 +90,14 @@ function displayDanhSach() {
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">Thời lượng</span>
                                                 </div>
-                                                <input id="thoiLuong1" class="form-control" placeholder="...">
+                                                <input id="thoiLuong1" class="form-control" placeholder="vd:90 phút...">
                                             </div>
 
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">Năm sản xuất</span>
                                                 </div>
-                                                <input id="namSanXuat1" class="form-control" placeholder="...">
+                                                <input id="namSanXuat1" class="form-control" placeholder="vd:2019...">
                                             </div>
 
                                             <div class="input-group mb-3">
@@ -158,7 +158,7 @@ function displayDanhSach() {
                 </div>
                 </div>
                 <div>
-                <button type="button" class="btn btn-danger" onclick = remove('${ds.id}')>Gỡ bỏ</button>
+                <button type="button" class="btn btn-danger" onclick = checkremove('${ds.id}')>Gỡ bỏ</button>
                 </div>
                 </td>
             </tr>`
@@ -192,6 +192,34 @@ function checkadd() {
     let isNE = false;
     for (let i = 0; i < newDS.length; i++) {
         const ds = newDS[i];
+        if (isNaN(kth) == true) {
+            alert("điểm IMDb phải là kiểu số!");
+            return true;
+        }
+        if (isNaN(ktg) == true) {
+            alert("năm sẳn xuất phải là kiểu số!");
+            return true;
+        }
+        if (isNaN(ktk) == false) {
+            alert("Quốc gia phải là kiểu text!");
+            return true;
+        }
+        if (isNaN(ktl) == true) {
+            alert("Ngôn ngữ phải là kiểu text!");
+            return true;
+        }
+        if (isNaN(kti) == true) {
+            alert("Đạo diễn phải là kiểu text!");
+            return true;
+        }
+        if (isNaN(ktj) == true) {
+            alert("Diễn viên phải là kiểu text!");
+            return true;
+        }
+        if (isNaN(ktd) == true) {
+            alert("Nhà sản xuất phải là kiểu text!");
+            return true;
+        }
         if (kto == "") {
             alert("Ảnh không được bỏ trống!");
             return true;
@@ -305,6 +333,14 @@ function add() {
     displayDanhSach();
 }
 
+function checkremove(id) {
+    let ktXoa = confirm("bạn có chắc chắn gỡ bỏ!");
+    if (ktXoa == true) {
+        remove(id);
+    }
+}
+
+
 function remove(id) {
     let newDS = JSON.parse(localStorage.getItem("DSPhim"));
     for (let i = 0; i < newDS.length; i++) {
@@ -321,6 +357,7 @@ function remove(id) {
 function ss(id) {
     localStorage.setItem("idfix", JSON.stringify(id));
 }
+
 
 function checkfix() {
     let newDS = JSON.parse(localStorage.getItem("DSPhim"));
@@ -400,9 +437,15 @@ function checkfix() {
 
     }
     if (isNE == false) {
+        checkfix2();
+    }
+}
+
+function checkfix2() {
+    let ktSua = confirm("bạn có chắc chắn thay đổi!");
+    if (ktSua == true) {
         fix();
     }
-    
 }
 
 function fix() {

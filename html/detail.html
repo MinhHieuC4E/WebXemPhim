@@ -8,54 +8,164 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="..\css\detail.css">
+    <link rel="stylesheet" href="C:\Users\admins\Downloads\fontawesome-free-5.11.2-web\css\all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+    body {
+        background-color: #22202c;
+        background-size: cover;
+
+
+    }
+
+    .pand {
+        margin-top: -1%;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+
+    .single-top {
+        margin-top: 3%;
+    }
+
+    .boder {
+
+        border-bottom: 4px double rgba(136, 136, 139, 0.849);
+        padding: 10px;
+        width: 95%;
+        margin-left: 20px;
+        box-shadow: 0 0 10px;
+    }
+
+    .top {
+        margin-top: 3%;
+    }
+
+    .text {
+        padding: 15px;
+        line-height: 1.5;
+    }
+
+    .buton {
+
+
+        background-color: rgba(37, 37, 37, 0.63);
+        position: sticky;
+        margin-top: -16%;
+        height: 69px;
+        width: 100%;
+
+    }
+
+    .car {
+        box-shadow: 0 0 10px rgb(116, 114, 114);
+    }
+</style>
 
 <body>
-
-    <a href="user.html"><button>back</button></a>
-    <div class="container" style="margin-top: 20px;">
+    <A href="../html/user.html"><button type="button" class="btn btn-outline-primary">back</button></A>
+    <div class="container">
+        <div class="single-top" id="ten">
+        </div>
+        <!-- Portfolio Item Heading -->
+        <!-- Portfolio Item Row -->
         <div class="row">
-            <div class="col-5">
-                <div id="movie-image"  position: relative;">
+            <div class="col-md-5 ">
+                <div class=" border-0  bg-dark rounded car" style="padding:10px;">
+                    <div style=" width: 100%; " id="movie-image"></div>
+                    <center>
+                        <div class=" border border-0 buton ">
+                            <button type="button" class="btn btn-primary " style=" margin-top:3%;" data-toggle="modal"
+                                data-target="#myModal">Xem Trailer</button></div>
+                    </center>
                 </div>
-            </div>
-            <div class="col-7">
-                <h2 id="ten-phim"></h2>
-                <div id="if-phim"></div>
-                <div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem Trailer</button>
-                    <div  class="modal" id="myModal">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                      
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
                             <!-- Modal Header -->
                             <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
-                      
+
                             <!-- Modal body -->
                             <div id="trailer" class="modal-body">
-                                
-                            </div> 
+
+                            </div>
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            </div>              
-                      
-                          </div>
+                                <button type="button" onclick=stopVideo(trailer) class="btn btn-danger"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+
                         </div>
-                      </div>
+                    </div>
                 </div>
-            </div>   
-            <div id="noi-dung" class="col-12"></div>
-            
+
+            </div>
+
+            <div class="col-md-7">
+                <h1 class=" pand font-weight-bold text-white ">
+                    <div style="color: rgb(255, 202, 29);text-shadow: 0 0 25px   rgba(179, 103, 230, 0.774) ;"
+                        id="ten-phim"></div>
+                </h1>
+
+                <div class=" text-white border border-secondary bg-dark rounded ">
+
+
+                    <ul class="my-4" style=" line-height: 2;list-style:none;" id="if-phim">
+
+                    </ul>
+                </div>
+
+                <div class="  border border-secondary bg-dark rounded top">
+                    <h6 class="text-white font-weight-bold boder">Đánh giá phim</h6>
+                    <div id="danh-gia" style="padding: 0px 2% 4px 4%;"></div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class=" text-white border border-secondary bg-dark rounded car top">
+                    <h2 class="font-weight-bold boder"> Nội Dung</h2>
+                    <p style=" padding: 15px; line-height: 2;" id="noiDung"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class=" text-white border border-secondary bg-dark rounded car top">
+                    <h2 class="font-weight-bold boder"> Review</h2>
+                    <p style=" padding: 15px; line-height: 2;" id="review"></p>
+                </div>
+            </div>
         </div>
 
     </div>
-    <script src="../js/detail.js"></script>
+    </div>
+
+
+
+    <script>
+            $('#stop').click(function () {
+                $('.yvideo').each(function () {
+                    $(this).stopVideo();
+                });
+            });
+    </script>
+    <script src="../js/detail1.js"></script>
 </body>
 
 </html>
