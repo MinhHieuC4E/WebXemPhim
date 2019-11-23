@@ -1,225 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-     
-     <link href="C:\Users\Admin\Desktop\c4ejs50\HTML\fontawesome-free-5.11.2-web\css\all.css" rel="stylesheet">
-     <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="news-css\medile.css" rel="stylesheet">
+  <link href="fontawesome-free-5.11.2-web\css\all.css" rel="stylesheet">
+  <link rel="stylesheet" href="theloai/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="theloai/owlcarousel/assets/owl.theme.default.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="theloai/owlcarousel/owl.carousel.min.js"></script>
+
+  <title>Document</title>
 </head>
 <style>
-body {
-		background-color: #22202c;
-		background-size: cover;
 
-
-  }
-  .pand{
-    margin-top:-1%;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 1.5;
-  }
-  .single-top{
-    margin-top:3%;
-  }
-  .boder{
-    
-    border-bottom: 4px  double rgba(136, 136, 139, 0.849);
-    padding: 10px;
-    width: 95%;
-    margin-left:20px;
-    box-shadow: 0 0 10px ;
-  }
-  .top{
-    margin-top:3%;
-  }
-  
-   .text{
-    padding: 15px;
-    line-height: 1.5;
-  }
-  .buton{
-    
-    
-   background-color: rgba(37, 37, 37, 0.63);
-    position:sticky ;
-    margin-top:-16% ;
-    height: 52px;
-    width: 100%;
-  
-  }
-  .car{
-    box-shadow: 0 0 10px  rgb(116, 114, 114);
-  }
 </style>
+
 <body>
-   
-     <!-- Page Content -->
-<div class="container">
+
+  <!-- Page Content -->
+  <div class="container">
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Trang Chủ</a>
-       
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-           
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Thể Loại
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-          
-                <a class="dropdown-item" href="#">Something else here</a>
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-          
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Năm
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-            
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-            
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-            
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  
-                </div>
-              </li>
-            
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-      <!-- <a  href="index.html"><p class="text-dark border-left-2 border-dark bg-light">home</p></a> -->
-      <div class="single-top" id="ten">
-          
-        </div>
-     <!-- Portfolio Item Heading -->
-     
-       
-     </h1>
-   
-     <!-- Portfolio Item Row -->
-     <div class="row">
-   
-       <div class="col-md-4 ">
-          <div class=" border-0  bg-dark rounded car" style="padding:10px;">
-        <div style=" width: 100%; " id="movie-image"></div>
-        <center>
-        <div class=" border border-0 buton "  >
-        <button type="button" class="btn btn-primary " style=" margin-top:3%;" data-toggle="modal" data-target="#myModal">Xem Trailer</button></div></center></div>
-        <div  class="modal" id="myModal">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-          
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-          
-                <!-- Modal body -->
-                <div id="" class="modal-body">
-                    
-                </div> 
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>              
-          
-              </div>
-            </div>
-          </div>
+      <a class="navbar-brand" href="Windex.html">Trang Chủ</a>
 
-       </div>
-   
-       <div class="col-md-5">
-         <h1 class=" pand font-weight-bold text-white " ><div style="color: rgb(255, 202, 29);text-shadow: 0 0 25px   rgba(179, 103, 230, 0.774) ;"  id="ten-phim"></div></h1>
-        
-            <div class=" text-white border border-secondary bg-dark rounded ">
-        
-         
-         <ul class="my-4"style=" line-height: 2;list-style:none;" id="if-phim">
-         
-         </ul>
-        </div>
-        
-         <div class="  border border-secondary bg-dark rounded top" >
-            <h6 class="text-white font-weight-bold boder">Đánh giá phim</h6>
-            <div style="padding: 0px 2% 4px 4%;">
-            <i class="fas fa-star" style="color: rgb(252, 228, 14);"></i>
-            <i class="fas fa-star" style="color: rgb(252, 228, 14);"></i>
-            <i class="fas fa-star" style="color: rgb(252, 228, 14);"></i>
-            <i class="fas fa-star" style="color: rgb(252, 228, 14);"></i>
-            <i class="fas fa-star-half-alt"  style="color: rgb(252, 228, 14);" ></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            </div>
-         </div>
-          </div>
-      
-         
-           
-              
-     </div>
- 
-     
-    
-    <div class="row">
-      <div class="col-md-12">
-     <div class=" text-white border border-secondary bg-dark rounded car top"  >
-       <h2 class="font-weight-bold boder"> Nội Dung</h2>
-       <p style=" padding: 15px; line-height: 2;" id="noiDung"></p>
-     </div>
-    
-  </div>
-     
-     </div>
-     <div class=" border border-secondary bg-dark rounded top " >
-        <h2 class="font-weight-bold boder text-white ">Phim Đề Xuất</h2>
 
-     <div class="row text" id="dx">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Thể Loại
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" onclick="theLoai('Phim hành động')">Phim Hành động</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('Phim kinh dị')">Phim Kinh Dị</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" onclick="theLoai('Phim viễn tưởng')">Phim viễn tưởng</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('Phim hoạt hình')">Phim hoạt hình</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('Phim hài') ">Phim hài</a>
+
+
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Năm
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" onclick="theLoai('1990')">Năm 1990</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('2007') ">Năm 2007</a>
+
+              <a class="dropdown-item" href="#" onclick="theLoai('2009')">Năm 2009</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('2010')">Năm 2010</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('2012')">Năm 2012</a>
+
+              <a class="dropdown-item" href="#" onclick="theLoai('2013')">Năm 2013</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('2014')">Năm 2014</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('2015')">Năm 2015</a>
+
+              <a class="dropdown-item" href="#" onclick="theLoai('2016') ">Năm 2016</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('2017') ">Năm 2017</a>
+
+              <a class="dropdown-item" href="#" onclick="theLoai('2019') ">Năm 2019</a>
+
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Quốc Gia
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" onclick="theLoai('Mỹ')">Phim Mỹ</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('Trung Quốc')">Phim Tàu</a>
+
+              <a class="dropdown-item" href="#" onclick="theLoai('Nhật Bản')">Phim Nhật</a>
+              <a class="dropdown-item" href="#" onclick="theLoai('Ấn Độ') ">Phim Ấn Độ</a>
+
+
+            </div>
+          </li>
+
+        </ul>
+       
+        <form action="timkiem.html" method="post" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="từ khóa..."  required="" id="src">
+          <input class="btn btn-outline-success my-2 my-sm-0"  type="submit" value="Search" onclick="tkk()" ></button>
+        </form>
+        
       </div>
+    </nav>
+    
+    <div class="single-top" id="ten">
 
     </div>
-     </div>
-     </div>
-  
-   <!-- /.container -->
-   <script src="detail.js"></script>
-   <script src="data3.js"></script>
-   <script src="theloai/theloai.js"></script>
-   <script src="timkiem.js"></script>
-  
+    <!-- Portfolio Item Heading -->
 
-  
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </h1>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+      <div class="col-md-5 ">
+        <div class=" border-0  bg-dark rounded car" style="padding:10px;">
+          <div style=" width: 100%; " id="movie-image"></div>
+          <center>
+            <div class=" border border-0 buton ">
+              <button type="button" class="btn btn-primary " style=" margin-top:3%;" data-toggle="modal"
+                data-target="#myModal">Xem Trailer</button></div>
+          </center>
+        </div>
+
+
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+
+              </div>
+
+              <!-- Modal body -->
+              <div id="trailer" class="modal-body">
+
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" onclick=stopVideo(trailer) class="btn btn-danger"
+                  data-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-7">
+        <h1 class=" pand font-weight-bold text-white ">
+          <div style="color: rgb(255, 202, 29);text-shadow: 0 0 25px   rgba(179, 103, 230, 0.774) ;" id="ten-phim">
+          </div>
+        </h1>
+
+        <div class=" text-white border border-secondary bg-dark rounded ">
+
+
+          <ul class="my-6" style=" line-height: 2;list-style:none;" id="if-phim">
+
+          </ul>
+        </div>
+
+        <div class="  border border-secondary bg-dark rounded top">
+          <h6 class="text-white font-weight-bold boder">Đánh giá phim</h6>
+
+          <div style="padding-left: 3% ;" id="danh-gia">
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class=" text-white border border-secondary bg-dark rounded car top">
+          <h2 class="font-weight-bold boder"> Nội Dung</h2>
+          <p style=" padding: 15px; line-height: 2;" id="noiDung"></p>
+        </div>
+
+      </div>
+      <div class="col-md-12">
+        <div class=" text-white border border-secondary bg-dark rounded car top">
+          <h2 class="font-weight-bold boder"> REVIEW Phim</h2>
+          <p style=" padding: 15px; line-height: 2;" id="rew"></p>
+        </div>
+
+      </div>
+      <div class=" border border-secondary bg-dark rounded top ">
+        <h2 class="font-weight-bold boder text-white ">Phim Đề Xuất</h2>
+     
+        <div class="row text " id="dx">
+        </div>
+      
+        <!-- <div class="owl-carousel">
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+</div> -->
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+  <script src="detail.js"></script>
+
+  <script src="data3.js"></script>
+  <script src="theloai/theloai.js"></script>
+  <script src="timkiem.js"></script>
+
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </body>
+
 </html>

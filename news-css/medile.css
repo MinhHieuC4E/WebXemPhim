@@ -1,0 +1,54 @@
+ 
+body {
+    background-color: #22202c;
+    background-size: cover;
+}
+.zoom {
+
+
+transition: transform .2s; /* Animation */
+
+}
+
+.zoom:hover {
+transform: scale(1.123); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.pand{
+margin-top:-1%;
+text-align: center;
+text-transform: uppercase;
+line-height: 1.5;
+}
+.single-top{
+margin-top:3%;
+}
+.boder{
+
+border-bottom: 4px  double rgba(136, 136, 139, 0.849);
+padding: 10px;
+width: 95%;
+margin-left:20px;
+box-shadow: 0 0 10px ;
+}
+.top{
+margin-top:3%;
+}
+
+.text{
+padding: 15px;
+line-height: 1.5;
+}
+.buton{
+
+
+background-color: rgba(37, 37, 37, 0.63);
+position:sticky ;
+margin-top:-16% ;
+height: 69px;
+width: 100%;
+
+}
+.car{
+box-shadow: 0 0 10px  rgb(116, 114, 114);
+}

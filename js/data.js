@@ -55,7 +55,7 @@ let danhSachPhim = [
     },
     {
         "id": "phim4",
-        "ten": "Fast and Furious: HOBBS và SHAW",
+        "ten": "Fast & Furious:HOBBS & SHAW",
         "theLoai": "Phim hành động",
         "nhaSanXuat": "Chris Morgan Productions, Seven Bucks Productions, Universal Pictures",
         "noiDung": "Sau 8 phim với phần doanh thu chạm mức 5 tỉ đô la Mỹ toàn cầu, giờ đây thương hiệu Fast & Furious sẽ trở lại với một phần ngoại truyện hoàn toàn độc lập với sự tham gia của Dwayne Johnson trong vai Luke Hobbs và Jason Statham trong vai Deckard Shaw trong Hobbs & Shaw.<br><br> Câu chuyện giữa hai người tưởng như không đội trời chung là Đặc vụ An ninh Ngoại giao Mỹ Luke Hobbs và tên tội phạm đánh thuê khét tiếng Deckard Shaw khi họ bất đắc dĩ phải bắt tay hợp tác nhằm ngăn chặn âm mưu của trùm phản diện cực nguy hiểm trong diện bí ẩn Brixton.",
