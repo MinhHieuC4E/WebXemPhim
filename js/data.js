@@ -2,7 +2,7 @@ let danhSachPhim = [
     {
         "id": "phim1",
         "ten": "Kẻ hủy diệt: thời đại genisys",
-        "theLoai": "Phim hành động, phim viễn tưởng",
+        "theLoai": "Phim hành động, Phim viễn tưởng",
         "nhaSanXuat": "Paramount Pictures, Skydance Media, Annapurna Pictures",
         "noiDung": "Kẻ hủy diệt (The Terminator) là một bộ phim điện ảnh ra mắt khán giả vào năm 1984 thuộc thể loại hành động/khoa học viễn tưởng của đạo diễn James Cameron, đồng tác giả là Cameron và William Wisher Jr với các diễn viên Arnold Schwarzenegger, Linda Hamilton và Michael Biehn. Bộ phim được sản xuất bởi Hemdale Film Corporation và được phân phối bởi Orion Pictures, và quay tại Los Angeles. <br> <br> Schwarzenegger thủ vai Kẻ hủy diệt/Người máy hủy diệt, một nhân vật danh nghĩa, một sát thủ người máy sinh học dường như không thể ngăn chặn, được siêu máy tính điện toán có trí thông minh nhân tạo gửi về năm 1984 từ năm 2029 nhằm để giết Sarah Connor, vai diễn của Linda Hamilton. Michael Biehn, thủ vai Kyle Reese, một người lính của Phe kháng chiến đi ngược thời gian để bảo vệ Sarah. <br> <br> Phần 5 của Kẻ hủy diệt (thời đại genisys) sẽ tập trung vào sự kiện trước khi Sarah Connor biến mất vào khoảng giữa Terminator 2: Judgment Day và Terminator 3: Rise of the Machines. Trong khoảng thời gian này người xem sẽ tiếp xúc với hình hài thật sự của Kẻ hủy diệt T-800 ở dạng con người, và đồng nghĩa với việc sau này tại sao hình mẫu của nhân vật được Skynet lựa cho các lần đưa về quá khứ sau này.",
         "thoiLuong": "126 phút",
@@ -56,7 +56,7 @@ let danhSachPhim = [
     {
         "id": "phim4",
         "ten": "Fast and Furious: HOBBS và SHAW",
-        "theLoai": "phim hành động",
+        "theLoai": "Phim hành động",
         "nhaSanXuat": "Chris Morgan Productions, Seven Bucks Productions, Universal Pictures",
         "noiDung": "Sau 8 phim với phần doanh thu chạm mức 5 tỉ đô la Mỹ toàn cầu, giờ đây thương hiệu Fast & Furious sẽ trở lại với một phần ngoại truyện hoàn toàn độc lập với sự tham gia của Dwayne Johnson trong vai Luke Hobbs và Jason Statham trong vai Deckard Shaw trong Hobbs & Shaw.<br><br> Câu chuyện giữa hai người tưởng như không đội trời chung là Đặc vụ An ninh Ngoại giao Mỹ Luke Hobbs và tên tội phạm đánh thuê khét tiếng Deckard Shaw khi họ bất đắc dĩ phải bắt tay hợp tác nhằm ngăn chặn âm mưu của trùm phản diện cực nguy hiểm trong diện bí ẩn Brixton.",
         "thoiLuong": "137 phút",
